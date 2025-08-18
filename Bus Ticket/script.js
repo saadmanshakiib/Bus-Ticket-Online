@@ -98,10 +98,6 @@ function search(){
         alert("Please fill all the fields");
         return;
     }
-    if(from == "Dhaka"){
-       alert("Both Starting Location & Destination Cant Be Same!");
-       return;
-    }
 
                  let bus = [
         {
@@ -210,7 +206,8 @@ function Confirm(){
                         selectedSeats.push(seatNumber);
             }
                 document.getElementById("confirmButton").disabled = selectedSeats.length === 0;
-        }
+            localStorage.setItem("count",selectedSeats.length);
+            }
 
         function payment(){
             const accnumber = document.getElementById("acc").value;
