@@ -17,6 +17,9 @@ function signin(){
     const email = document.getElementById("email").value;
         const pass = document.getElementById("pass").value;
 
+        const newUserEmail2 = localStorage.getItem("newUserEmail");
+                const newUserPass2 = localStorage.getItem("newUserPass");
+
             let isValid = false;
 
         for(let i  = 0;i<users.length;i++){
@@ -24,6 +27,10 @@ function signin(){
                 isValid = true;
                     break;           
                 }
+            }
+            if(newUserEmail2 && newUserPass2){
+                isValid = true;
+                window.location.href = "homepage.html";
             }
 
             if(isValid){
@@ -48,6 +55,7 @@ function check(){
     const date = document.getElementById("date").value;
     const year = document.getElementById("year").value;
 
+
     if(name == "" || number == "" || nid=="" || date == "" || year=="" || email =="" || Password=="" || ConfirmPass==""){
         alert("Please fill all the required details");
     }
@@ -68,6 +76,10 @@ function check(){
                 }
                 else if(users[i].Email != email){
                     if(enterEmail.endsWith("@gmail.com") && number.length == 11 && year<=2025 && nid.length == 16 && date<=31){
+
+                                        localStorage.setItem("newUserEmail",enterEmail);
+                                        localStorage.setItem("newUserPass",ConfirmPass);
+
                         alert("Account has been created!");
                         window.location.href="loginpage.html";
                     }
@@ -90,13 +102,21 @@ function check(){
 }
 
 function search(){
-    const from = document.getElementById("fromStation").value;
-    const to = document.getElementById("toStation").value;
-    const date = document.getElementById("journeyDate").value;
+    let from = document.getElementById("fromStation").value;
+    let to = document.getElementById("toStation").value;
+    let date = document.getElementById("journeyDate").value;
 
     if(from == "" || to == "" || date == ""){
         alert("Please fill all the fields");
         return;
+    }
+
+    if(from == to){
+            alert("Arrival & Destination Cant Be Same");
+
+            document.getElementById("fromStation").value = "";
+                        document.getElementById("toStation").value = "";
+            return;
     }
 
                  let bus = [
@@ -112,7 +132,7 @@ function search(){
                         break_point : "Hotel Noorzahan"
         },
         {
-            bus_name : "Sonar Bangla Express",
+            bus_name : "Sonar Bangla",
             bus_no : "702",
             from_station : "Chittagong",
             to_station : "Dhaka",
@@ -123,7 +143,7 @@ function search(){
                         break_point : "Hotel Noorzahan"
         },
         {
-            bus_name : "Sonar Bangla Express",
+            bus_name : "Sonar Bangla ",
             bus_no : "703",
             from_station : "Dhaka",
             to_station : "Chittagong",
@@ -165,7 +185,119 @@ function search(){
             boarding_point : "Abdullahpur Bus Stand",
             dropping_point : "Dampara Bus Stand",
                         break_point : "Hotel Noorzahan"
-        }
+        },
+         {
+            bus_name : "Ekota",
+            bus_no : "806",
+            from_station : "Dhaka",
+            to_station : "Bogura",
+            starting_time : "11:00 PM",
+            reaching_time : "6:00 AM",
+            boarding_point : "Mohakhali",
+            dropping_point : "BOGURA Sadar Bus Stand",
+                        break_point : "Food village"
+        },
+        {
+            bus_name : "Ekota",
+            bus_no : "807",
+            from_station : "Bogura",
+            to_station : "Dhaka",
+            starting_time : "10:00 AM",
+            reaching_time : "4:00 PM",
+            boarding_point : "Bogura Sadar Bus Stand",
+            dropping_point : "Mohakhali",
+                        break_point : "Food village"
+        },
+        {
+            bus_name : "Unique",
+            bus_no : "606",
+            from_station : "Dhaka",
+            to_station : "Cumillah",
+            starting_time : "10:00 AM",
+            reaching_time : "1:00 PM",
+            boarding_point : "Abdullahpur Bus Stand",
+            dropping_point : "Choddogram",
+                        break_point : "None"
+        },
+        {
+            bus_name : "Unique",
+            bus_no : "606",
+            to_station : "Dhaka",
+            from_station : "Cumillah",
+            starting_time : "8:00 AM",
+            reaching_time : "12:00 AM",
+            boarding_point : "Cumillah Sadar Bus Stand",
+            dropping_point : "Mohakhali",
+                        break_point : "None"
+        },
+        {
+            bus_name : "Doel Express",
+            bus_no : "506",
+            from_station : "Dhaka",
+            to_station : "Mymensingh",
+            starting_time : "10:00 AM",
+            reaching_time : "1:00 PM",
+            boarding_point : "Abdullahpur Bus Stand",
+            dropping_point : "Trishal Bus Stand",
+                        break_point : "Hotel 4 Star"
+        },
+        {
+            bus_name : "Doel Express",
+            bus_no : "507",
+            from_station : "Mymensingh",
+            to_station : "Dhaka",
+            starting_time : "2:00 PM",
+            reaching_time : "5:00 PM",
+            boarding_point : "Trishal Bus Stand",
+            dropping_point : "Abdullahpur",
+                        break_point : "Hotel 4 Star"
+        },
+        {
+            bus_name : "Bipul",
+            bus_no : "406",
+            from_station : "Dhaka",
+            to_station : "Barishal",
+            starting_time : "2:00 PM",
+            reaching_time : "8:00 PM",
+            boarding_point : "Abdullahpur Bus Stand",
+            dropping_point : "Barishal Sadar Bus Stand",
+                        break_point : "Hotel Relax"
+        },
+        {
+            bus_name : "Bipul",
+            bus_no : "607",
+            from_station : "Barishal",
+            to_station : "Dhaka",
+            starting_time : "10:00 PM",
+            reaching_time : "600 AM",
+            boarding_point : "Bairshal Sadar Bus Stand",
+            dropping_point : "Abdullahpur Bus Stand",
+                        break_point : "Hotel Relax"
+        },
+        {
+            bus_name : "Shaymoli",
+            bus_no : "306",
+            from_station : "Dhaka",
+            to_station : "Rangpur",
+            starting_time : "8:00 AM",
+            reaching_time : "1:00 PM",
+            boarding_point : "Abdullahpur Bus Stand",
+            dropping_point : "Rangpur Sadar Bus Stand",
+                        break_point : "Hotel Ruhana"
+        },
+        {
+            bus_name : "Shaymoli",
+            bus_no : "307",
+            from_station : "Rangpur",
+            to_station : "Dhaka",
+            starting_time : "2:00 PM",
+            reaching_time : "8:00 AM",
+            boarding_point : "Rangpur Sadar Bus Stand",
+            dropping_point : "Mohakhali  Bus Stand",
+                        break_point : "Hotel Ruhana"
+        },
+
+        
     ]
 
     let matched_bus = bus.filter(
