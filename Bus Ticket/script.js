@@ -208,6 +208,28 @@ function search(){
             dropping_point : "Mohakhali",
                         break_point : "Food village"
         },
+          {
+            bus_name : "Ekota",
+            bus_no : "808",
+            from_station : "Bogura",
+            to_station : "Dhaka",
+            starting_time : "12:00 PM",
+            reaching_time : "3:00 PM",
+            boarding_point : "Bogura Sadar Bus Stand",
+            dropping_point : "Mohakhali",
+                        break_point : "Food village"
+        },
+          {
+            bus_name : "Ekota",
+            bus_no : "809",
+            from_station : "Dhaka",
+            to_station : "Bogura",
+            starting_time : "7:00 AM",
+            reaching_time : "11:00 AM",
+            boarding_point : "Bogura Sadar Bus Stand",
+            dropping_point : "Mohakhali",
+                        break_point : "Food village"
+        },
         {
             bus_name : "Unique",
             bus_no : "606",
@@ -221,13 +243,35 @@ function search(){
         },
         {
             bus_name : "Unique",
-            bus_no : "606",
-            to_station : "Dhaka",
-            from_station : "Cumillah",
+            bus_no : "608",
+            from_station : "Dhaka",
+            to_station : "Cumillah",
+            starting_time : "12:00 AM",
+            reaching_time : "3:00 PM",
+            boarding_point : "Abdullahpur Bus Stand",
+            dropping_point : "Choddogram",
+                        break_point : "None"
+        },
+        {
+            bus_name : "Unique",
+            bus_no : "607",
+            to_station : "Cumillah",
+            from_station : "Dhaka",
             starting_time : "8:00 AM",
             reaching_time : "12:00 AM",
             boarding_point : "Cumillah Sadar Bus Stand",
             dropping_point : "Mohakhali",
+                        break_point : "None"
+        },
+        {
+            bus_name : "Unique",
+            bus_no : "606",
+            from_station : "Cumillah",
+            to_station : "Dhaka",
+            starting_time : "10:00 AM",
+            reaching_time : "1:00 PM",
+            boarding_point : "Cumillah Sadar Bus Stand",
+            dropping_point : "Abdulllahpur",
                         break_point : "None"
         },
         {
@@ -237,6 +281,17 @@ function search(){
             to_station : "Mymensingh",
             starting_time : "10:00 AM",
             reaching_time : "1:00 PM",
+            boarding_point : "Abdullahpur Bus Stand",
+            dropping_point : "Trishal Bus Stand",
+                        break_point : "Hotel 4 Star"
+        },
+         {
+            bus_name : "Doel Express",
+            bus_no : "509",
+            from_station : "Dhaka",
+            to_station : "Mymensingh",
+            starting_time : "3:00 PM",
+            reaching_time : "6:00 PM",
             boarding_point : "Abdullahpur Bus Stand",
             dropping_point : "Trishal Bus Stand",
                         break_point : "Hotel 4 Star"
@@ -252,6 +307,17 @@ function search(){
             dropping_point : "Abdullahpur",
                         break_point : "Hotel 4 Star"
         },
+         {
+            bus_name : "Doel Express",
+            bus_no : "508",
+            from_station : "Mymensingh",
+            to_station : "Dhaka",
+            starting_time : "5:00 PM",
+            reaching_time : "8:00 PM",
+            boarding_point : "Trishal Bus Stand",
+            dropping_point : "Abdullahpur",
+                        break_point : "Hotel 4 Star"
+        },
         {
             bus_name : "Bipul",
             bus_no : "406",
@@ -259,6 +325,17 @@ function search(){
             to_station : "Barishal",
             starting_time : "2:00 PM",
             reaching_time : "8:00 PM",
+            boarding_point : "Abdullahpur Bus Stand",
+            dropping_point : "Barishal Sadar Bus Stand",
+                        break_point : "Hotel Relax"
+        },
+         {
+            bus_name : "Bipul",
+            bus_no : "408",
+            from_station : "Dhaka",
+            to_station : "Barishal",
+            starting_time : "12:00 PM",
+            reaching_time : "5:00 PM",
             boarding_point : "Abdullahpur Bus Stand",
             dropping_point : "Barishal Sadar Bus Stand",
                         break_point : "Hotel Relax"
@@ -273,6 +350,39 @@ function search(){
             boarding_point : "Bairshal Sadar Bus Stand",
             dropping_point : "Abdullahpur Bus Stand",
                         break_point : "Hotel Relax"
+        },
+         {
+            bus_name : "Bipul",
+            bus_no : "609",
+            from_station : "Barishal",
+            to_station : "Dhaka",
+            starting_time : "7:00 PM",
+            reaching_time : "9:00 AM",
+            boarding_point : "Bairshal Sadar Bus Stand",
+            dropping_point : "Abdullahpur Bus Stand",
+                        break_point : "Hotel Relax"
+        },
+        {
+            bus_name : "Shaymoli",
+            bus_no : "306",
+            from_station : "Dhaka",
+            to_station : "Rangpur",
+            starting_time : "8:00 AM",
+            reaching_time : "1:00 PM",
+            boarding_point : "Abdullahpur Bus Stand",
+            dropping_point : "Rangpur Sadar Bus Stand",
+                        break_point : "Hotel Ruhana"
+        },
+        {
+            bus_name : "Shaymoli",
+            bus_no : "308",
+            from_station : "Dhaka",
+            to_station : "Rangpur",
+            starting_time : "10:00 AM",
+            reaching_time : "3:00 PM",
+            boarding_point : "Abdullahpur Bus Stand",
+            dropping_point : "Rangpur Sadar Bus Stand",
+                        break_point : "Hotel Ruhana"
         },
         {
             bus_name : "Shaymoli",
@@ -292,6 +402,17 @@ function search(){
             to_station : "Dhaka",
             starting_time : "2:00 PM",
             reaching_time : "8:00 AM",
+            boarding_point : "Rangpur Sadar Bus Stand",
+            dropping_point : "Mohakhali  Bus Stand",
+                        break_point : "Hotel Ruhana"
+        },
+         {
+            bus_name : "Shaymoli",
+            bus_no : "309",
+            from_station : "Rangpur",
+            to_station : "Dhaka",
+            starting_time : "12:00 PM",
+            reaching_time : "6:00 AM",
             boarding_point : "Rangpur Sadar Bus Stand",
             dropping_point : "Mohakhali  Bus Stand",
                         break_point : "Hotel Ruhana"
